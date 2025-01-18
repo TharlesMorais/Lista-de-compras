@@ -4,8 +4,8 @@
 }
 
 :root {
+  font-size: 62.5%;
   font-family: "Inter", sans-serif;
-  line-height: 150%;
   --background-primary: #F4F5FB;
   --background-secondary: #FFFFFF;
   --color-brand: #CA3884;
@@ -16,4 +16,26 @@
   --text-tertiary: #9CA3AF;
   --border-primary: #D1D5DB;
   --border-hover: #B9C2D0;
+}
+
+h1 {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  font-weight: bold;
+}
+label, p {
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+label {
+  font-weight: 600;
+}
+p, a {
+  font-weight: 500;
+}
+a {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color: var(--color-brand);
+  text-decoration: none;
 }

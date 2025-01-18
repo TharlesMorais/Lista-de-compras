@@ -2,3 +2,18 @@
   margin: 0;
   padding: 0;
 }
+
+:root {
+  font-family: "Inter", sans-serif;
+  line-height: 150%;
+  --background-primary: #F4F5FB;
+  --background-secondary: #FFFFFF;
+  --color-brand: #CA3884;
+  --color-brand-hover: #A52C6B;
+  --color-brand-danger: #C93847;
+  --text-primary: #080B12;
+  --text-secondary: #374151;
+  --text-tertiary: #9CA3AF;
+  --border-primary: #D1D5DB;
+  --border-hover: #B9C2D0;
+}

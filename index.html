@@ -3,9 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Lista de compras</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-  
+  <div id="page">
+    <button> Voltar </button>
+      <h1>Compras da semana</h1>
+      <form action="">
+        <label for="newItem">Adicione um novo item</label>
+        <input type="text" name="newItem" id="newItem" placeholder="Adicione um novo item">
+
+        <button type="submit" id="add">Adicionar item</button>
+      </form>
+
+      <section id="list">
+        <ul>
+          <li>
+            <span>Pão de forma</span>
+          </li>
+          <li>
+            <span>Café preto</span>
+          </li>
+          <li>
+            <span>Suco de laranja</span>
+          </li>
+          <li>
+            <span>Bolacha</span>
+          </li>
+        </ul>
+      </section>
+
+      <section id="alert">
+        <p> O item foi removido da lista</p>
+      </section>
+  </div>
 </body>
 </html>

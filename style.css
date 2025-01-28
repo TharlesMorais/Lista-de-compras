@@ -18,24 +18,123 @@
   --border-hover: #B9C2D0;
 }
 
+body{
+  background: var(--background-primary);
+  display: flex;
+  justify-content: center;
+}
+
+#page{
+  box-sizing: border-box;
+  padding: 3.2rem;
+  width: 39rem;
+}
+
 h1 {
   font-size: 2.4rem;
   line-height: 3.2rem;
   font-weight: bold;
+  margin-bottom: 4.4rem;
+  margin-top: 1.6rem;
 }
-label, p {
+label, p, span, i {
   font-size: 1.6rem;
   line-height: 2rem;
 }
 label {
   font-weight: 600;
+  display: block;
+  position: relative;
 }
-p, a {
+p, a, span {
   font-weight: 500;
+}
+span {
+  color: var(--text-secondary);
 }
 a {
   font-size: 1.4rem;
   line-height: 1.6rem;
   color: var(--color-brand);
   text-decoration: none;
+}
+
+.addNewItem {
+  position: relative;
+}
+
+input {
+  box-sizing: border-box;
+  position: relative;
+  top: -2rem;
+  width: 32.6rem;
+  padding: 1.1rem 1.8rem;
+  border: none;
+  border-radius: 1.2rem;
+  border: .2rem solid var(--border-primary);
+}
+input::placeholder {
+  color: var(--text-tertiary);
+}
+.input-error {
+  border-color: var(--color-brand-danger);
+}
+
+#buttonTrash {
+  display: flex;
+}
+#buttonTrash i {
+  font-size: 4.5rem;
+  color: var(--text-primary);
+}
+#buttonTrash i:hover{
+  color: var(--color-brand);
+}
+
+button {
+  cursor: pointer;
+  width: 100%;
+  padding: 1.2rem;
+  color: var(--background-secondary);
+  background: var(--color-brand);
+  border: none;
+  border-radius: 1.2rem;
+  margin-bottom: 4rem;
+}
+ul{
+  list-style: none;
+  background: var(--background-primary);
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5.7rem;
+  padding: 1.2rem;
+  background: var(--background-secondary);
+  margin-bottom: 2rem;
+  border-radius: 1.2rem;
+}
+li:last-child{
+  margin-bottom: 3.6rem;
+}
+i{
+  cursor: pointer;
+}
+
+
+.invisible {
+  display: none;
+}
+.danger{
+  display: flex;
+  justify-content: space-between;
+  background: var(--color-brand-danger);
+  color: var(--background-secondary);
+  padding: 1.2rem;
+  border-radius: 1.2rem;
+}
+.danger i{
+  font-size: 2rem;
 }

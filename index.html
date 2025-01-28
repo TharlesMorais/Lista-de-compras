@@ -8,38 +8,38 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+
 </head>
 <body>
   <div id="page">
     <a href="#"> <- Voltar</a>
       <h1>Compras da semana</h1>
-      <form action="">
-        <label for="newItem">Adicione um novo item</label>
-        <input type="text" name="newItem" id="newItem" placeholder="Adicione um novo item">
+      <form>
+        <div class="addNewItem">
+          <label for="newItem">Adicione um novo item</label>
+          <input type="text" name="newItem" id="newItem" placeholder="Adicione um novo item">
+        </div>
+        <div id="buttonTrash">
+          <button type="submit" id="add">Adicionar item</button>
+          <i id="largeTrash" class="ph ph-trash" style="display: none;"></i>
+        </div>
 
-        <button type="submit" id="add">Adicionar item</button>
       </form>
 
       <section id="list">
         <ul>
-          <li>
-            <span>Pão de forma</span>
-          </li>
-          <li>
-            <span>Café preto</span>
-          </li>
-          <li>
-            <span>Suco de laranja</span>
-          </li>
-          <li>
-            <span>Bolacha</span>
-          </li>
+          
         </ul>
       </section>
 
-      <section id="danger">
+      <div class="invisible">
+        <i class="ph-fill ph-warning-circle"></i>
         <p> O item foi removido da lista</p>
-      </section>
+        <i class="ph ph-x"></i>
+      </div>
   </div>
+  <script src="./script.js"></script>
 </body>
 </html>

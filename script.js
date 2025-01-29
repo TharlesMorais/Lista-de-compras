@@ -4,6 +4,7 @@ const form = document.querySelector("form")
 const ul = document.querySelector("ul")
 const close = document.querySelector('i.ph.ph-x')
 const largeTrash = document.querySelector('#largeTrash')
+const init = document.querySelector("#init")
 
 function updateSelectedCount() {
   const selectedItems = document.querySelectorAll(".ph-check-square")
@@ -13,6 +14,14 @@ function updateSelectedCount() {
     largeTrash.style.display = "block"
   } else {
     largeTrash.style.display = "none"
+  }
+}
+
+function checkListEmpty() {
+  if(ul.children.length === 0) {
+    init.classList.remove("invisible")
+  }else {
+    init.classList.add("invisible")
   }
 }
 
@@ -36,13 +45,19 @@ ul.addEventListener("click", (event) => {
   
   if (target.classList.contains("trash")) {
     const list = target.closest("li")
-    
-    if(list) {
-      list.remove()
-      
-      if(danger) {
-        danger.classList.remove("invisible")
-        danger.classList.add("danger")
+    const checkbox = list.querySelector(".ph-check-square")
+    if(checkbox) {
+      if(list) {
+        list.remove()
+        checkListEmpty()
+        
+        if(danger) {
+          danger.classList.remove("invisible")
+          danger.classList.add("danger")
+        }
+  
+        checkListEmpty()
+        updateSelectedCount()
       }
     }
   }      
@@ -52,13 +67,13 @@ largeTrash.addEventListener("click", () => {
   const selectedItems = document.querySelectorAll(".ph-check-square")
 
   if (selectedItems.length > 1) {
-    const confirmDelete = confirm("Você tem certeza que deseja excluir todos os itens selecionados?");
+    const confirmDelete = confirm("Você tem certeza que deseja excluir todos os itens selecionados?")
     
     if (confirmDelete) {
       selectedItems.forEach(item => {
-        const listItem = item.closest("li");
+        const listItem = item.closest("li")
         if (listItem) {
-          listItem.remove();
+          listItem.remove()
 
           if(danger) {
             danger.classList.remove("invisible")
@@ -67,15 +82,22 @@ largeTrash.addEventListener("click", () => {
         }
       });
 
+      checkListEmpty()
       updateSelectedCount();
     }
   }
 })
 
+function capitalizeFirstLetter(text) {
+  return text.toLowerCase().replace(/^\w/, (c) => c.toUpperCase())
+}
+
 form.onsubmit = (event) => {
       event.preventDefault()
-      const value = input.value
+      let value = input.value
       const regex = /\d+/g
+
+      value = capitalizeFirstLetter(value)
       
       if (regex.test(value) || value === "") {
         const value = input.value.replace(regex, "")
@@ -101,6 +123,7 @@ form.onsubmit = (event) => {
     
       input.value = ""
 
+      checkListEmpty()
       updateSelectedCount()
 }
     

@@ -30,6 +30,16 @@ body{
   width: 39rem;
 }
 
+.logo{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 6.2rem;
+}
+
+#init, #init span{
+  color: var(--border-hover);
+}
+
 h1 {
   font-size: 2.4rem;
   line-height: 3.2rem;
@@ -102,9 +112,12 @@ button {
   margin-bottom: 4rem;
   white-space: nowrap;
 }
+
 ul{
   list-style: none;
   background: var(--background-primary);
+  max-height: 40rem;
+  overflow-y: auto;
 }
 
 li {
@@ -135,6 +148,7 @@ i{
   color: var(--background-secondary);
   padding: 1.2rem;
   border-radius: 1.2rem;
+  margin-bottom: 4rem;
 }
 .danger i{
   font-size: 2rem;
@@ -152,4 +166,5 @@ i{
   input {
     width: 43.8rem;
   }
+  
 }

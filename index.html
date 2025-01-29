@@ -14,6 +14,10 @@
 </head>
 <body>
   <div id="page">
+    <div class="logo">
+      <img src="./assets/logo.svg" alt="">
+      <img src="./assets/quicklist.svg" alt="">
+    </div>
     <a href="#"> <- Voltar</a>
       <h1>Compras da semana</h1>
       <form>
@@ -25,25 +29,34 @@
           <button type="submit" id="add">Adicionar item</button>
           <i id="largeTrash" class="ph ph-trash" style="display: none;"></i>
         </div>
-
       </form>
-
-      <section id="list">
-        <ul>
-          <li>
-            <label>
-              <i class="ph ph-square"></i>
-              <span>Pão de forma</span>
-            </label>
-            <i class="ph ph-trash trash"></i>
-          </li>
-        </ul>
-      </section>
 
       <div class="invisible">
         <i class="ph-fill ph-warning-circle"></i>
         <p> O item foi removido da lista</p>
         <i class="ph ph-x"></i>
+      </div>
+
+      <section id="list">
+        <ul></ul>
+      </section>
+
+      <div id="init">
+        <h1>Comece sua lista de compras</h1>
+      <li>
+        <label>
+          <i class="ph ph-square"></i>
+          <span>Pão de forma</span>
+        </label>
+        <i class="ph ph-trash trash"></i>
+      </li>
+      <li>
+        <label>
+          <i class="ph ph-square"></i>
+          <span>Café</span>
+        </label>
+        <i class="ph ph-trash trash"></i>
+      </li>
       </div>
   </div>
   <script src="./script.js"></script>

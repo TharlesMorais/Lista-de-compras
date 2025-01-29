@@ -15,8 +15,6 @@ Este projeto é uma aplicação simples de lista de compras, onde você pode adi
 - JavaScript para funcionalidades interativas, como adicionar itens, selecionar e excluir 📜.
 
 
-CSS3 para estilização da página 🎨.
-, além de salvar e carregar a lista com o localStorage .
 ## 🔗 Links
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tharles-morais-a3272416a/)
 
